@@ -767,9 +767,9 @@ html {
 .mega-menu-glass::before {
   content: '';
   position: absolute;
-  top: -40px;
+  top: -60px;
   left: 0;
   right: 0;
-  height: 40px;
+  height: 60px;
   background: transparent;
 }

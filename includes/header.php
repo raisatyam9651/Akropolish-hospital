@@ -31,13 +31,14 @@
 
         foreach ($navigation as $item):
         ?>
-          <div class="relative h-full flex items-center mega-menu-trigger">
+          <div class="relative h-full flex items-center mega-menu-trigger" 
+            <?php echo isset($item['hasMegaMenu']) ? 'onmouseenter="openMegaMenu()" onmouseleave="closeMegaMenu()"' : ''; ?>
+            <?php echo isset($item['hasDropdown']) ? 'onmouseenter="openServicesDropdown()" onmouseleave="closeServicesDropdown()"' : ''; ?>
+          >
             <a
               href="<?php echo $item['href']; ?>"
               class="nav-link h-full px-2 text-gray-700 hover:text-[#328CCB] font-medium transition-colors duration-200 flex items-center space-x-1 <?php echo isset($item['hasMegaMenu']) || isset($item['hasDropdown']) ? 'has-dropdown' : ''; ?>"
               data-page="<?php echo $item['page'] ?? ''; ?>"
-              <?php echo isset($item['hasMegaMenu']) ? 'onmouseenter="openMegaMenu()" onmouseleave="closeMegaMenu()"' : ''; ?>
-              <?php echo isset($item['hasDropdown']) ? 'onmouseenter="openServicesDropdown()" onmouseleave="closeServicesDropdown()"' : ''; ?>
             >
               <span><?php echo $item['name']; ?></span>
               <?php if (isset($item['hasMegaMenu']) || isset($item['hasDropdown'])): ?>
@@ -250,7 +251,7 @@ function keepMegaMenuOpen() {
 function closeMegaMenu() {
     megaMenuTimeout = setTimeout(() => {
         document.getElementById('mega-menu').classList.add('hidden');
-    }, 500);
+    }, 1000);
 }
 
 function openServicesDropdown() {
@@ -265,7 +266,7 @@ function keepServicesDropdownOpen() {
 function closeServicesDropdown() {
     servicesDropdownTimeout = setTimeout(() => {
         document.getElementById('services-dropdown').classList.add('hidden');
-    }, 500);
+    }, 1000);
 }
 
 function toggleMobileMenu() {
