@@ -183,7 +183,7 @@ include 'includes/head.php';
                   </a>
 
                   <a
-                    href="/doctor-profile.php?id=<?php echo htmlspecialchars($doctor['id']); ?>"
+                    href="/doctors/<?php echo htmlspecialchars($doctor['id']); ?>"
                     class="nav-link text-[#328CCB] hover:text-[#2a7bb5] font-medium text-sm transition-colors duration-200"
                   >
                     View Full Profile →

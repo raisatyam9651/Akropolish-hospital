@@ -1,6 +1,7 @@
 <?php
 require_once 'includes/data.php';
-$page_title = 'Akropolis Super Speciality Hospital | Best Hospital in Ambikapur';
+$page_title = 'Akropolis Super Speciality Hospital | Best Multi-Specialty Hospital in Gurugram, Haryana';
+$meta_description = 'Akropolis Super Speciality Hospital - NABH accredited multi-specialty hospital in Gurugram, Haryana. Expert doctors, advanced technology, 24×7 emergency care. Book appointment now!';
 include 'includes/head.php';
 ?>
 
@@ -296,7 +297,7 @@ include 'includes/head.php';
                   />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div class="absolute bottom-4 left-4 right-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                    <a href="/doctor-profile.php?id=<?php echo $doctor['id']; ?>" class="w-full bg-white/95 backdrop-blur-sm text-[#328CCB] py-3 rounded-xl font-bold text-center block shadow-lg">
+                    <a href="/doctors/<?php echo $doctor['id']; ?>" class="w-full bg-white/95 backdrop-blur-sm text-[#328CCB] py-3 rounded-xl font-bold text-center block shadow-lg">
                       View Profile
                     </a>
                   </div>

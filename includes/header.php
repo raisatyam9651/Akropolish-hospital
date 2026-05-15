@@ -167,13 +167,35 @@
       <nav class="space-y-4">
         <?php foreach ($navigation as $item): ?>
           <div>
-            <a
-              href="<?php echo $item['href']; ?>"
-              class="nav-link block text-gray-700 hover:text-[#328CCB] font-medium py-2"
-              data-page="<?php echo $item['page'] ?? ''; ?>"
-            >
-              <?php echo $item['name']; ?>
-            </a>
+            <?php if (isset($item['hasMegaMenu'])): ?>
+              <!-- Mobile Departments (Click to expand) -->
+              <button
+                onclick="toggleMobileDeptMenu()"
+                class="nav-link block w-full text-left text-gray-700 hover:text-[#328CCB] font-medium py-2 flex items-center justify-between"
+              >
+                <span><?php echo $item['name']; ?></span>
+                <?php echo getIcon('ChevronDown', 'h-4 w-4 transition-transform duration-200 dept-chevron'); ?>
+              </button>
+              <div id="mobile-dept-menu" class="hidden ml-4 mt-2 space-y-2">
+                <?php foreach (array_slice($megaMenuDepartments, 0, 15) as $dept): ?>
+                  <a
+                    href="<?php echo $dept['href']; ?>"
+                    class="nav-link block text-gray-600 hover:text-[#328CCB] py-2 text-sm border-b border-gray-100"
+                    data-page="<?php echo ltrim($dept['href'], '/'); ?>"
+                  >
+                    <?php echo $dept['name']; ?>
+                  </a>
+                <?php endforeach; ?>
+              </div>
+            <?php else: ?>
+              <a
+                href="<?php echo $item['href']; ?>"
+                class="nav-link block text-gray-700 hover:text-[#328CCB] font-medium py-2"
+                data-page="<?php echo $item['page'] ?? ''; ?>"
+              >
+                <?php echo $item['name']; ?>
+              </a>
+            <?php endif; ?>
             <?php if (isset($item['hasDropdown'])): ?>
               <div class="ml-4 mt-2 space-y-2">
                 <?php foreach ($servicesMenuItems as $service): ?>
@@ -250,5 +272,14 @@ function toggleMobileMenu() {
     menu.classList.toggle('hidden');
     menu.classList.toggle('open');
     menu.classList.toggle('closed');
+}
+
+function toggleMobileDeptMenu() {
+    const deptMenu = document.getElementById('mobile-dept-menu');
+    const chevron = document.querySelector('.dept-chevron');
+    deptMenu.classList.toggle('hidden');
+    if (chevron) {
+        chevron.classList.toggle('rotate-180');
+    }
 }
 </script>

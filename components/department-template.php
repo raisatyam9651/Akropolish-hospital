@@ -532,7 +532,7 @@ $pageDept = $deptConfig[$dept_key];
           Need Immediate Support?
         </h3>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           <div class="bg-gray-50 rounded-xl p-6 shadow-lg service-card">
             <?php echo getIcon('Phone', 'h-8 w-8 text-[#D66C43] mx-auto mb-4'); ?>
             <h4 class="font-bold text-gray-900 mb-2">Emergency</h4>
@@ -560,6 +560,40 @@ $pageDept = $deptConfig[$dept_key];
             <p class="text-sm text-gray-500 mt-1">We'll respond within 24 hours</p>
           </div>
         </div>
+
+        <?php if (in_array($dept_key, ['obstetrics-gynecology', 'plastic-surgery'])): ?>
+        <!-- Service Areas Section for SEO -->
+        <div class="mt-20 pt-16 border-t border-gray-100">
+          <div class="flex items-center justify-center space-x-3 mb-12">
+            <div class="bg-[#328CCB]/10 p-2 rounded-lg">
+              <?php echo getIcon('MapPin', 'h-6 w-6 text-[#328CCB]'); ?>
+            </div>
+            <h2 class="text-3xl font-bold text-gray-900">Serving Across Haryana</h2>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-12 text-left">
+            <?php
+            $haryanaDistricts = [
+                'ambala' => 'Ambala', 'bhiwani' => 'Bhiwani', 'charkhi-dadri' => 'Charkhi Dadri',
+                'faridabad' => 'Faridabad', 'fatehabad' => 'Fatehabad', 'gurgaon' => 'Gurgaon',
+                'hisar' => 'Hisar', 'jhajjar' => 'Jhajjar', 'jind' => 'Jind', 'kaithal' => 'Kaithal',
+                'karnal' => 'Karnal', 'kurukshetra' => 'Kurukshetra', 'mahendragarh' => 'Mahendragarh',
+                'mewat' => 'Mewat', 'palwal' => 'Palwal', 'panchkula' => 'Panchkula', 'panipat' => 'Panipat',
+                'rewari' => 'Rewari', 'rohtak' => 'Rohtak', 'sirsa' => 'Sirsa', 'sonipat' => 'Sonipat',
+                'yamunanagar' => 'Yamunanagar'
+            ];
+            foreach ($haryanaDistricts as $slug => $name):
+            ?>
+              <div class="group">
+                <a href="/<?php echo $dept_key; ?>/haryana/<?php echo $slug; ?>/" class="flex items-center space-x-3 text-gray-600 hover:text-[#328CCB] transition-colors duration-200">
+                  <div class="h-1.5 w-1.5 bg-gray-300 rounded-full group-hover:bg-[#328CCB] transition-colors"></div>
+                  <span class="font-medium"><?php echo $name; ?> में सबसे अच्छे विशेषज्ञ</span>
+                </a>
+              </div>
+            <?php endforeach; ?>
+          </div>
+        </div>
+        <?php endif; ?>
       </div>
     </div>
   </section>

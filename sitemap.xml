@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Main Pages -->
+  <url>
+    <loc>https://akropolishospital.com/</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://akropolishospital.com/about.php</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://akropolishospital.com/departments.php</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://akropolishospital.com/doctors.php</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://akropolishospital.com/contact.php</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Orthopedic Specialty Pages -->
+  <url>
+    <loc>https://akropolishospital.com/orthopedics.php</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <?php
+  $ortho_districts = ['ambala','bhiwani','charkhi-dadri','faridabad','fatehabad','gurugram','hisar','jhajjar','jind','kaithal','karnal','kurukshetra','mahendragarh','nuh','palwal','panchkula','panipat','rewari','rohtak','sirsa','sonipat','yamunanagar'];
+  foreach ($ortho_districts as $district):
+  ?>
+  <url>
+    <loc>https://akropolishospital.com/orthopedic-hospital/haryana/<?php echo $district; ?>/</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <?php endforeach; ?>
+
+  <!-- Haddi Ka Doctor Pages -->
+  <url>
+    <loc>https://akropolishospital.com/haddi-ka-doctor.php</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <?php
+  foreach ($ortho_districts as $district):
+  ?>
+  <url>
+    <loc>https://akropolishospital.com/haddi-ka-doctor/haryana/<?php echo $district; ?>/</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <?php endforeach; ?>
+
+  <!-- Department Pages -->
+  <url>
+    <loc>https://akropolishospital.com/cardiology.php</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://akropolishospital.com/neurology.php</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://akropolishospital.com/nephrology.php</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://akropolishospital.com/pediatrics.php</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://akropolishospital.com/oncology.php</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://akropolishospital.com/ent.php</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://akropolishospital.com/ophthalmology.php</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://akropolishospital.com/gastroenterology.php</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://akropolishospital.com/dermatology.php</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://akropolishospital.com/plastic-surgery.php</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Diagnostic Pages -->
+  <url>
+    <loc>https://akropolishospital.com/ct-scan.php</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://akropolishospital.com/laboratory.php</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://akropolishospital.com/endoscopy.php</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://akropolishospital.com/colonoscopy.php</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://akropolishospital.com/dialysis.php</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://akropolishospital.com/bronchoscopy.php</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Emergency & Other -->
+  <url>
+    <loc>https://akropolishospital.com/emergency.php</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://akropolishospital.com/health-nutrition.php</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>
