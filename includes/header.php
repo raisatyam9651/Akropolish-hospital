@@ -50,7 +50,7 @@
             <!-- Mega Menu -->
             <div
               id="mega-menu"
-              class="mega-menu-glass absolute top-full left-1/2 transform -translate-x-1/2 w-screen max-w-4xl rounded-2xl shadow-2xl border border-gray-100 p-8 hidden"
+              class="mega-menu-glass absolute top-[95%] left-1/2 transform -translate-x-1/2 w-screen max-w-4xl rounded-2xl shadow-2xl border border-gray-100 p-8 hidden"
               onmouseenter="keepMegaMenuOpen()"
               onmouseleave="closeMegaMenu()"
             >
@@ -98,7 +98,7 @@
             <!-- Services Dropdown -->
             <div
               id="services-dropdown"
-              class="mega-menu-glass absolute top-full left-1/2 transform -translate-x-1/2 w-64 rounded-xl shadow-2xl border border-gray-100 py-4 hidden"
+              class="mega-menu-glass absolute top-[95%] left-1/2 transform -translate-x-1/2 w-64 rounded-xl shadow-2xl border border-gray-100 py-4 hidden"
               onmouseenter="keepServicesDropdownOpen()"
               onmouseleave="closeServicesDropdown()"
             >
