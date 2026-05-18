@@ -5,5 +5,5 @@ $landmarks = array (
   1 => 'DD Block',
   2 => 'C Block',
 );
-include __DIR__ . '/../../../../components/haddi-hindi-template.php';
+include __DIR__ . '/../../../components/haddi-hindi-template.php';
 ?>

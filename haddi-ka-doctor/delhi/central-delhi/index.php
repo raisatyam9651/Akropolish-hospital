@@ -5,5 +5,5 @@ $landmarks = array (
   1 => 'Janpath',
   2 => 'Rajiv Chowk Metro',
 );
-include __DIR__ . '/../../../../components/haddi-hindi-template.php';
+include __DIR__ . '/../../../components/haddi-hindi-template.php';
 ?>
