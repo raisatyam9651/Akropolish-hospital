@@ -3,7 +3,6 @@
 // Note: Emergency bar is included in each page template
 ?>
 <header class="bg-white shadow-lg sticky top-8 z-50">
-  <meta name="google-site-verification" content="_IhyvA0aT7QngolfxMGT3X-TQoEEv2Qh18k793Kra3E" />
   <div class="container mx-auto px-4">
     <div class="flex items-center justify-between h-16 lg:h-20">
       <!-- Logo -->
